@@ -3,13 +3,14 @@
 </h1>
 
 <div align="center">
-  <p>API simples desenvolvida com Express Js, simulando um banco de dados armazenando usuários e publicações e suas respectivas informações.</p>
+  <p>API simples desenvolvida com Express Js, simulando um banco de dados armazenando usuários e artigos com suas respectivas informações.</p>
 </div>
 <div>
 <ul>
 <li>Utiliza mais de uma rota</li>
 <li>Usuários com Id repetido não podem ser criados</li>
 <li>Não é possivel alterar ou deletar usuários com id inexistente</li>
+<li>Rota posts deleta um artigo pelo título</li>
 <ul>
 
 
@@ -52,8 +53,8 @@
 ````
 <div>
 <p>API está configurada para a porta 3000, pode ser alterado no arquivo index.js.</p>
-<p>Ao clonar este repositório para utilizar lembre-se de instalar as dependências do projeto (node modules) utilizando
-npm install.</p>
+<p>Ao clonar este repositório é necessário a instalação do Node.js, Express Js além das dependências do projeto (node_modules).</p>
+<p>Testes podem ser realizados pela plataforma <a href="https://www.postman.com/">Postman</a> </p>
 </div>
 
 <div style=" display: inline_block;"> 
