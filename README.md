@@ -1,7 +1,7 @@
 <h1 align="center">
   API-Express
 </h1>
-
+<br>  
 <div align="center">
   <p>API simples desenvolvida com Express Js, simulando um banco de dados armazenando usuários e artigos com suas respectivas informações.</p>
 </div>
@@ -52,11 +52,11 @@
  },
 ````
 <div>
+<br>  
 <p>API está configurada para a porta 3000, pode ser alterado no arquivo index.js.</p>
 <p>Ao clonar este repositório é necessário a instalação do Node.js, Express Js além das dependências do projeto (node_modules).</p>
 <p>Testes podem ser realizados pela plataforma <a href="https://www.postman.com/">Postman</a> </p>
 </div>
-
 <div style=" display: inline_block;"> 
  <a href="https://expressjs.com/">
   <img align="center" alt="express"  src="https://icongr.am/devicon/express-original-wordmark.svg?size=148&color=83cd29">
