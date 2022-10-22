@@ -1,65 +1,58 @@
 <h1 align="center">
-  API-Express
+  Players API
 </h1>
 <br>  
 <div align="center">
-  <p>API simples desenvolvida com Express Js, simulando um banco de dados armazenando usuários e artigos com suas respectivas informações.</p>
+ <p>API simples desenvolvida com ASP.NET e EntityFramework</p>
+</div>
+<div>
+<p> API para um jogo ou plataforma que possui um sistema de pontuação entre os usuários, retornando para o cliente informações como Nome do Jogador/Usuário, Pontuação atual e Creditos dentro da plataforma</p>
+<br>
+<p> Atualmente hospedada pela Azure: <a href="https://ulissesplayerapi.azurewebsites.net/">LINK</a></p>
+<br>
 </div>
 <div>
 <ul>
-<li>Utiliza mais de uma rota</li>
-<li>Usuários com Id repetido não podem ser criados</li>
-<li>Não é possivel alterar ou deletar usuários com id inexistente</li>
-<li>Rota posts deleta um artigo pelo título</li>
+<li>Suporta os metodos padrão de requisições HTTP.</li>
+<li>Swagger para a documentação.</li>
+<li>Usuários/Jogadores com Id repetido ou invalidos não podem ser criados, o que danificaria o banco de dados.</li>
+<li>Rota TOP traz informação direta para a criação de um placar geral, menos dados enviados e processados pelo lado do cliente</li>
 <ul>
-
-
-
+<br>
 </div>
-
-```javascript
-//testando localmente
-"http://localhost:port/route"
-//exemplo:
-"http://localhost:3000/users/4"
-```
-
-```javascript
-//users:
-.GET users/id     //retorna user com o ID enviado
-.GET users/       //retorna todos os users
-.POST users/      //retorna ok se o user enviado foi salvo
-.PUT users/       //retorna ok se o user com o ID enviado foi substituido
-.DELETE users/id    //retorna ok se o user com o ID enviado foi deletado
-```
-```javascript
-//posts:
-.GET posts/            //retorna todos os posts
-.POST posts/           //retorna ok se o posts enviado foi salvo
-.DELETE posts/title    //retorna ok se o posts com o title enviado foi deletado
-```
-````javascript
-//Estrutura
-//users
+<h3>Estrutura</h3> 
+	
+````json
 {
-	"name": "Ulisses Auresco",
-	"id": "1"
+	"Id": "1",
+	"Nome": "Ulisses Auresco",
+	"Score": "150",
+	"Cash": "0",	
 },
-//posts
-{
-	"title": "hello",
-	"text": "Hello World from Postman!"
- },
 ````
+
+<h3>Métodos</h3> 
+
+```C#
+//Metodos:
+.GET api/Players    		//Obter todos os Jogadores
+.GET api/Players/{id}    	//Obter um Jogador pelo ID
+.GET api/Players/TOP/{max}      //Obter no maximo max jogadores com a maior pontuação
+.POST api/Players    		//Criar um novo Jogador
+.PUT api/Players /{id}    	//Alterar um Jogador cadastrado
+.DELETE api/Players /{id}   	//Deletar um Jogador cadastrado
+```
+<br>
 <div>
 <br>  
-<p>API está configurada para a porta 3000, pode ser alterado no arquivo index.js.</p>
-<p>Ao clonar este repositório é necessário a instalação do Node.js, Express Js além das dependências do projeto (node_modules).</p>
-<p>Testes podem ser realizados pela plataforma <a href="https://www.postman.com/">Postman</a> </p>
+<p>API para testes locais esta configurada para a porta 5001/5000 e ao iniciar para a rota api/Players isso pode ser alterado em .</p>
+<p>Ao clonar este repositório é necessário a vincular uma Connection String de um banco dedos SQL em .</p>
+<p>Documentação e Testes pelo Swagger na rota raiz, ou os teste pode ser realizados pela plataforma externa <a href="https://www.postman.com/">Postman</a> </p>
 </div>
-<div style=" display: inline_block;"> 
- <a href="https://expressjs.com/">
-  <img align="center" alt="express"  src="https://icongr.am/devicon/express-original-wordmark.svg?size=148&color=83cd29">
-  <img align="center" alt="node" height="50" width="70" src="https://icongr.am/devicon/nodejs-original.svg?size=148&color=83cd29">
+<br>
+<div align="center" style=" display: inline_block;"> 
+ <a href="https://visualstudio.microsoft.com/pt-br/">
+  <img align="center" alt="CSharp"  height="70" width="70"  src="https://icongr.am/devicon/csharp-original.svg?size=128&color=currentColor">
+  <img align="center" alt="VisualStudio" height="70" width="70" src="https://icongr.am/devicon/visualstudio-plain.svg?size=128&color=currentColor">
     </a>
 </div>
